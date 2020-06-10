@@ -3,8 +3,8 @@ import { readJsonSync } from 'https://deno.land/std/fs/mod.ts';
 import { parse } from 'https://deno.land/std/flags/mod.ts';
 
 const { args } = Deno;
-const DEFAULT_PORT = 8000;
-const argPort = parse(args).port;
+const DEFAULT_PORT: number = 8000;
+const argPort: any = parse(args).port;
 
 const s = serve({ port: argPort ? Number(argPort) : DEFAULT_PORT });
 
