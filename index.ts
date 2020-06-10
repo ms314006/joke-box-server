@@ -14,6 +14,7 @@ for await (const req of s) {
     req.respond({
       headers: new Headers({
         'content-type': 'text/html;charset=UTF-8',
+        'access-control-allow-origin': '*'
       }),
       body: JSON.stringify(jokes),
     });
